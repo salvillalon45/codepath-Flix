@@ -42,8 +42,8 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         Log.d(TAG, "Inside getItemViewType()");
 
         MovieModel movieModel = movies.get(position);
-        Integer vote_average = movieModel.getVote_average();
-
+        double vote_average = movieModel.getVote_average();
+        Log.i(TAG, "Movie Title:: " + movieModel.getTitle());
         if (vote_average > 5) {
             Log.i(TAG, "Movie is Popular");
             Log.i(TAG, "Movie vote average above 5. The average is:: " + vote_average);

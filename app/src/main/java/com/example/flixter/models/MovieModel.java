@@ -3,24 +3,33 @@ package com.example.flixter.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Parcel
 public class MovieModel {
 
     String posterPath;
     String title;
     String overview;
     String backdropPath;
-    Integer vote_average;
+    double vote_average;
+    int movieId;
+
+    // Empty constructor needed by the Parceler library
+    public MovieModel() {
+
+    }
 
     public MovieModel(JSONObject jsonObject) throws JSONException {
         this.posterPath = jsonObject.getString("poster_path");
         this.title = jsonObject.getString("title");
         this.overview = jsonObject.getString("overview");
         this.backdropPath = jsonObject.getString("backdrop_path");
-        this.vote_average = jsonObject.getInt("vote_average");
+        this.vote_average = jsonObject.getDouble("vote_average");
+        this.movieId = jsonObject.getInt("id");
     }
 
     public static List<MovieModel> fromJsonArray(JSONArray movieJsonArray) throws JSONException {
@@ -33,11 +42,11 @@ public class MovieModel {
         return movies;
     }
 
-    public Integer getVote_average() {
+    public double getVote_average() {
         return vote_average;
     }
 
-    public void setVote_average(Integer vote_average) {
+    public void setVote_average(double vote_average) {
         this.vote_average = vote_average;
     }
 
@@ -72,4 +81,9 @@ public class MovieModel {
     public void setBackdropPath(String backdropPath) {
         this.backdropPath = backdropPath;
     }
+
+    public int getMovieId() {
+        return movieId;
+    }
+
 }

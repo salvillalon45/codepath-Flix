@@ -2,6 +2,35 @@
 Flix is an app that allows users to browse movies from the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 ---
 
+## Flix Part 2
+
+### User Stories
+
+#### REQUIRED (10pts)
+
+- [x] (8pts) Expose details of movie (ratings using RatingBar, popularity, and synopsis) in a separate activity.
+- [x] (2pts) Allow video posts to be played in full-screen using the YouTubePlayerView.
+
+#### BONUS
+
+- [x] Trailers for popular movies are played automatically when the movie is selected (1 point).
+  - [x] When clicking on a popular movie (i.e. a movie voted for more than 5 stars) the video should be played immediately.
+  - [x] Less popular videos rely on the detailed page should show an image preview that can initiate playing a YouTube video.
+- [x] Add a play icon overlay to popular movies to indicate that the movie can be played (1 point).
+- [x] Apply data binding for views to help remove boilerplate code. (1 point)
+- [x] Add a rounded corners for the images using the Glide transformations. (1 point)
+
+### App Walkthough GIF
+<img src="walkthrough_v2.gif" width=250><br>
+
+### Notes
+Describe any challenges encountered while building the app.
+- Challenges when implementing the Glide Transformation stretch story. I had to look at more resources in the internet as I had some troubles. For example, when attempting stretch story #5 
+I tried using Glide for the image transformation but for some reason, it kept adding extra padding on top and below the image
+I found the solution here: [Resource](https://stackoverflow.com/questions/15142780/how-do-i-remove-extra-space-above-and-below-imagevie) 
+- Challenges when implementing the Glide Transformation stretch story. Another challenged that I encountered is that I noticed that 
+Glide transformation take time to load. I noticed that some pictures had the Glide transformation applied but not others
+
 ## Flix Part 1
 
 ### User Stories
