@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/ivPoster"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:layout_marginStart="0dp"
             android:layout_marginTop="10dp"
             tools:srcCompat="@tools:sample/avatars"
@@ -29,7 +29,8 @@
 
         <!-- Here is for the overlay -->
 
-
+        <!-- Code for Stretch Story 3 -->
+        <!-- Here we are adding a play icon overlay to popular movies to indicate that the movie can be played -->
         <!-- Here play icon that will go over the movie poster -->
         <ImageView
             android:id="@+id/ivPlayIcon"

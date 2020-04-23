@@ -29,7 +29,9 @@ Describe any challenges encountered while building the app.
 I tried using Glide for the image transformation but for some reason, it kept adding extra padding on top and below the image
 I found the solution here: [Resource](https://stackoverflow.com/questions/15142780/how-do-i-remove-extra-space-above-and-below-imagevie) 
 - Challenges when implementing the Glide Transformation stretch story. Another challenged that I encountered is that I noticed that 
-Glide transformation take time to load. I noticed that some pictures had the Glide transformation applied but not others
+Glide transformation take time to load. I noticed that some pictures had the Glide transformation applied but not others. After having
+office hours with Tejen Patel. I was able to user the .override() to normalize all the images that come from the api. By doing this there will be no discrepancy when 
+it comes to doing a transformation since it will apply the transformation to the image of the same size.
 
 ## Flix Part 1
 

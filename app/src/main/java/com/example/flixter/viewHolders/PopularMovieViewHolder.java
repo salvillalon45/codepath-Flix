@@ -49,13 +49,12 @@ public class PopularMovieViewHolder extends RecyclerView.ViewHolder {
         // Here we are adding a rounded corners for the images using the Glide transformations.
         // I found the solution in this post: https://stackoverflow.com/questions/15142780/how-do-i-remove-extra-space-above-and-below-imagevie
         // Needed to include android:adjustViewBounds="true" in the imageView in popular_movie_view_holder
-        int radius = 100; // corner radius, higher value = more rounded
-        int margin = 10; // crop margin, set to 0 for corners with no crop
-        GlideApp.with(context).load(imageUrl).transform(new RoundedCornersTransformation(radius, margin)).into(ivPoster);
+        // Here we apply .override() to normalize all the images that come from the api. By doing this there will be no descrepency when we apply it to the ImageView
+        int radius = 90; // corner radius, higher value = more rounded
+        int margin = 0; // crop margin, set to 0 for corners with no crop
+        GlideApp.with(context).load(imageUrl).override(1000,200).transform(new RoundedCornersTransformation(radius, margin)).into(ivPoster);
 //        Glide.with(context).load(imageUrl).into(ivPoster);
 
-        // Code for Stretch Story 3
-        // Here we are adding a play icon overlay to popular movies to indicate that the movie can be played
 //        int opacity = 150; // from 0 to 255
 //        int opacity = 10; // from 0 to 255
 //        overlay.setBackgroundColor(opacity * 0x1000000); // black with a variable alpha
